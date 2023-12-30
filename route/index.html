@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .path{
+      position: absolute;
+      top: 1rem;
+      width: 100%;
+      background-color: #ccc;
+      height: 50px;
+    }
+    .bus{
+      position: absolute;
+      top: 1.4rem;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: green;
+      transition: all 1s linear;
+    }
+    
+    .stop{
+      position: absolute;
+      top: 1.4rem;
+     
+      border-radius: 50%;
+      display: flex;
+      background-color: red;
+      height: 20px;
+      width: 20px;
+      margin: 5px;
+      z-index: 99;
+    }
+    .stop:nth-child(1){
+      display: none;
+    }
+    .stop:nth-child(2){
+      left:20%;
+    }
+    .stop:nth-child(3){
+      left:40%;
+    }
+    .stop:nth-child(4){
+      left:60%;
+    }
+    .stop:nth-child(5){
+      left:80%;
+    }
+    .message{
+      position: absolute;
+      top: 50%;
+      font-size: 3rem;
+      display: none;
+      
+    }
+  </style>
+
+</head>
+<body>
+  <div class="path"></div>
+  <div class="bus" id="bus"></div>
+
+  <div class="stops">
+    <div class="stop"></div>
+    <div class="stop"></div>
+    <div class="stop"></div>
+    <div class="stop"></div>
+    <div class="stop"></div>
+
+    <div class="messages">
+      <div class="message" id="message1">1</div>
+      <div class="message" id="message2">2</div>
+      <div class="message" id="message3">3</div>
+      <div class="message" id="message4">4</div>
+      <div class="message" id="message5"></div>
+    </div>
+  </div>
+
+  <script>
+  const bus = document.getElementById('bus');
+  const message1 = document.getElementById('message1');
+  const message2 = document.getElementById('message2');
+  const message3 = document.getElementById('message3');
+  const message4 = document.getElementById('message4');
+
+
+  
+  /* const stops = [
+    { left: '0',   message: message5 },
+    { left: '20%', message: message1 },
+    { left: '40%', message: message2 },
+    { left: '60%', message: message3 },
+    { left: '80%', message: message4 }
+  ];
+
+  let currentStop = 0;
+
+  function showNextMessage() {
+   setInterval(()=>{
+    stops[currentStop].message.style.display = 'block';
+   },1000)
+    setTimeout(() => {
+      stops[currentStop].message.style.display = 'none';
+      currentStop++;
+      if (currentStop < stops.length) {
+        moveBus(stops[currentStop].left);
+      }
+    }, 5000);
+  }
+ */
+
+ /*  function moveBus(left) {
+    bus.style.left = left;
+    showNextMessage();
+  }
+
+  moveBus(stops[currentStop].left); */
+/*   mesaage=[message1,message2,message3,message4]
+  arr=["0","20%","40%","60%","80%"]
+  temp=0;
+  showMessage=()=>{
+    setInterval(function(){
+      arr[temp].mesaage[temp].style.dispaly='block'
+    },1000)
+  }
+
+  function move(left){
+    rem=bus.style.left="20%";
+
+  }
+  move() */
+  </script>
+</body>
+</html>
